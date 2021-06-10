@@ -223,6 +223,8 @@ GameObject:
   - component: {fileID: 1717034786}
   - component: {fileID: 1717034787}
   - component: {fileID: 1717034788}
+  - component: {fileID: 1717034790}
+  - component: {fileID: 1717034789}
   m_Layer: 0
   m_Name: BeginScript
   m_TagString: Untagged
@@ -402,6 +404,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dae1d6c75922b44ea500ddd2884fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1717034789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717034777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79bebe2eed0cc441b3516a83cabdeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  peaches: 0
+  kiwis: 0
+--- !u!114 &1717034790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717034777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d8001dceabe724f8e0b6800048a882, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alpha: 5
+  myOtherClass: {fileID: 0}
 --- !u!1 &2094098363
 GameObject:
   m_ObjectHideFlags: 0
