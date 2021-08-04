@@ -7,25 +7,23 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
     private GameObject focalPoint;
+    public GameObject powerupIndicator;
     private float powerUpStrength = 15.0f;
     public float speed = 5.0f;
     public bool hasPowerUp = false;
-    public GameObject powerupIndicator;
-
-    // Start is called before the first frame update
+    
     void Start()
-    {
+    { 
+        //helps direct you around focal point
         playerRb = GetComponent<Rigidbody>();
         focalPoint = GameObject.Find("Focal Point");
     }
-
-    // Update is called once per frame
+    
     void Update()
-    {
+    { 
+        //forward movement
         float forwardInput = Input.GetAxis("Vertical");
-        
         playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
-
         powerupIndicator.transform.position = transform.position + new Vector3(0, -0.5f, 0);
     }
 
@@ -48,7 +46,8 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {
+    { 
+        // bump your enemys off platform
         if (collision.gameObject.CompareTag("Enemy") && hasPowerUp)
         {
             Rigidbody enemyRigidbody = collision.gameObject.GetComponent<Rigidbody>();
