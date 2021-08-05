@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private float powerUpStrength = 15.0f;
     public float speed = 5.0f;
     public bool hasPowerUp = false;
+   
     
     void Start()
     { 
