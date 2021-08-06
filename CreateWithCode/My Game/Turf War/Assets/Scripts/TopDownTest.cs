@@ -10,7 +10,7 @@ public class TopDownTest : MonoBehaviour
     float vertical;
     float moveLimiter = 0.7f;
 
-    public float runSpeed = 20.0f;
+    public float runSpeed = 4.0f;
 
     void Start ()
     {
@@ -35,4 +35,12 @@ public class TopDownTest : MonoBehaviour
 
         body.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
     }
+
+//private void OnTriggerEnter(Collider other)
+   // {
+        //if (other.CompareTag("Point"))
+       // {
+       //     Destroy(other.gameObject);
+       // }
+    //}
 }
