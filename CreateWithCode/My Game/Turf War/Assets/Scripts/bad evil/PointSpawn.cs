@@ -7,7 +7,7 @@ public class PointSpawn : MonoBehaviour
 {
 
     public GameObject pointPrefab;
-   public int creditValue = 3;
+   public int creditValue = 1;
    public IntData numberCount;
    public Text counterText;
    public Renderer rend;
@@ -26,31 +26,32 @@ public class PointSpawn : MonoBehaviour
     }
     
    // void 
-        public IEnumerator OnTriggerEnter2D(Collider2D collision) 
+        public void OnTriggerEnter2D(Collider2D collision) 
     {
         if (collision.name == "Player")
-            // Destroy(gameObject);
         {
+            Destroy(gameObject);
+       // {
             // get current score and add the credit value to it
-            numberCount.value += creditValue;
+           // numberCount.value += creditValue;
             // set the text object equal to the score
-            counterText.text = numberCount.value.ToString();
-            Debug.Log("*****" + numberCount.value);
+           // counterText.text = numberCount.value.ToString();
+           // Debug.Log("*****" + numberCount.value);
             // set game object to false so it disapears
-            rend.enabled = false;
-            int wait_time = 5;
-            yield return new WaitForSeconds(wait_time);
-            rend.enabled = true;
+           // rend.enabled = false;
+           // int wait_time = 5;
+           // yield return new WaitForSeconds(wait_time);
+           // rend.enabled = true;
         }
 
-        //StartCoroutine(PointCountdownRoutine());
+        StartCoroutine(PointCountdownRoutine());
     }
 
-   // IEnumerator PointCountdownRoutine()
-   // {
-     //   yield return new WaitForSeconds(5);
-    //   rend.enabled = true;
-   // }
+   IEnumerator PointCountdownRoutine()
+    {
+       yield return new WaitForSeconds(5);
+       rend.enabled = true;
+    }
     
 }
 

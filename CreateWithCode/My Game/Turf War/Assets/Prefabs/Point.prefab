@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8310611402678551076}
   - component: {fileID: 8310611402678551079}
   - component: {fileID: 8310611402678551078}
-  - component: {fileID: 1641597696117752186}
   - component: {fileID: 747022562037471844}
+  - component: {fileID: 3369537289639800761}
   m_Layer: 0
   m_Name: Point
   m_TagString: Point
@@ -110,23 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1641597696117752186
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8310611402678551073}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 011355b267e439e48a1a42ecb7817d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pointPrefab: {fileID: 8310611402678551073}
-  creditValue: 3
-  numberCount: {fileID: 0}
-  counterText: {fileID: 0}
-  rend: {fileID: 0}
 --- !u!60 &747022562037471844
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -155,3 +138,21 @@ PolygonCollider2D:
     - - {x: 0, y: 0.5}
       - {x: -0.4330127, y: -0.25000003}
       - {x: 0.43301272, y: -0.24999996}
+--- !u!114 &3369537289639800761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8310611402678551073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29664ff48e81dae4395e37e9c8f708f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 1
+  explosionFx: {fileID: 0}
+  gameObj: {fileID: 8310611402678551073}
+  regenCount: 10
+  rend: {fileID: 0}
+  regenTime: 5

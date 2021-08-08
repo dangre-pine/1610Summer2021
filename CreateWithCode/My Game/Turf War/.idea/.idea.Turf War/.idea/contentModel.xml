@@ -216,16 +216,18 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="bad evil" t="Include">
+            <e p="EnemyMove.cs" t="Include" />
+            <e p="IntData.cs" t="Include" />
             <e p="PlayerController.cs" t="Include" />
             <e p="PlayerMovement1.cs" t="Include" />
+            <e p="PointSpawn.cs" t="Include" />
             <e p="TestMove.cs" t="Include" />
           </e>
-          <e p="EnemyMove.cs" t="Include" />
-          <e p="IntData.cs" t="Include" />
+          <e p="GameManager.cs" t="Include" />
           <e p="Pcmn" t="Include">
             <e p="EnemyPathing.cs" t="Include" />
           </e>
-          <e p="PointSpawn.cs" t="Include" />
+          <e p="PointSpawnTwo.cs" t="Include" />
           <e p="SpawnManager.cs" t="Include" />
           <e p="TopDownTest.cs" t="Include" />
         </e>
