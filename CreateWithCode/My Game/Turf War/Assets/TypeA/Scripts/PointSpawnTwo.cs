@@ -43,11 +43,24 @@ public class PointSpawnTwo : MonoBehaviour
         if (collision.name == "Player")
         {
             rend = GetComponent<Renderer>();
-           gameObject.SetActive(false);
-          // rend.enabled = false;
             Debug.Log("this is frustrating");
             Debug.Log("get tag" + gameObject.tag);
             Debug.Log("get name" + gameObject.name);
+            Debug.Log("Object Status Before Collision " + GameObject.FindWithTag("Row 1 Point 3").activeSelf);
+            gameObject.SetActive(false);
+            if (!GameObject.FindWithTag("Row 1 Point 3").activeSelf)
+            {
+                Debug.Log("WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWw");
+            }
+            else if (GameObject.FindWithTag("Row 1 Point 3").activeSelf)
+            {
+                Debug.Log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
+            }
+            Debug.Log("Object Status After Collision " + GameObject.FindWithTag("Row 1 Point 3").activeSelf);
+          // rend.enabled = false;
+          //  Debug.Log("this is frustrating");
+            //Debug.Log("get tag" + gameObject.tag);
+            //Debug.Log("get name" + gameObject.name);
            // regenTime -= Time.deltaTime;
            // if (regenTime < 0)
            // {
