@@ -3,18 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Point : MonoBehaviour
 {
     private Rigidbody rb;
-    private TypeBGameManager gameManager;
+    private GameManager gameManager;
     public int pointValue;
     public GameObject grassExplosionFx;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        gameManager = GameObject.Find("Game Manager").GetComponent<TypeBGameManager>();
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
 
     }
 
