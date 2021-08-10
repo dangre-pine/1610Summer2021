@@ -23,13 +23,13 @@ public class Point : MonoBehaviour
     {
        if (collision.name == "Player")
         {
-           // if (gameManager.isGameActive)
-            //{
+           if (gameManager.isGameActive)
+            {
                 // Debug.Log("collison");
                 Destroy(gameObject);
                 gameManager.UpdateScore(pointValue);
                 GrassExplode();
-            //}
+            }
         }
     }
 

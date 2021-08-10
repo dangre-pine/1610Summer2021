@@ -28,20 +28,26 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        InvokeRepeating("SpawnPoints", startDelay, pointSpawnInterval);
-        InvokeRepeating("SpawnEnemys", startDelay, enemySpawnInterval);
+        //InvokeRepeating("SpawnPoints", startDelay, pointSpawnInterval);
+        //InvokeRepeating("SpawnEnemys", startDelay, enemySpawnInterval);
     }
     
-    // Start is called before the first frame update
-    public void StartGame(int difficulty)
+    // Restart game by reloading the scene
+    public void RestartGame()
     {
-        pointSpawnInterval /= difficulty;
-        enemySpawnInterval /= difficulty;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    
+    public void StartGame()
+    {
+       // pointSpawnInterval /= difficulty;
+      //  enemySpawnInterval /= difficulty;
         isGameActive = true;
-       // StartCoroutine(SpawnPoints());
-        //StartCoroutine(SpawnEnemys());
+        StartCoroutine(SpawnPoints());
+        StartCoroutine(SpawnEnemys());
         
-        //score = 0;
+        score = 0;
         timer = 60;
         UpdateScore(0);
         titleScreen.SetActive(false);
@@ -52,7 +58,7 @@ public class GameManager : MonoBehaviour
     {
         if (isGameActive == true)
         {
-            //CountdownTimer();
+            CountdownTimer();
         }
 
         if (timer < 0)
@@ -61,33 +67,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void SpawnPoints()
+    IEnumerator SpawnPoints()
     {
         while (isGameActive)
         {
-            //yield return new WaitForSeconds(pointSpawnInterval);
+            yield return new WaitForSeconds(pointSpawnInterval);
             int pointIndex = Random.Range(0, pointPrefab.Length);
             Vector3 spawnPos = new Vector3(spawnPosX, Random.Range(-spawnRangeY, spawnRangeY), 0);
 
-            if (isGameActive)
-            {
+            //if (isGameActive)
+            //{
                 Instantiate(pointPrefab[pointIndex], spawnPos, pointPrefab[pointIndex].transform.rotation);
-            }
+            //}
         }
     }
 
-    void SpawnEnemys()
+   IEnumerator SpawnEnemys()
     {
         while (isGameActive)
         {
            // Debug.Log("what the heck");
-           // yield return new WaitForSeconds(enemySpawnInterval);
+            yield return new WaitForSeconds(enemySpawnInterval);
             int enemyIndex = Random.Range(0, enemyPrefab.Length);
             Vector3 spawnPos = new Vector3(spawnPosX, Random.Range(-spawnRangeY, spawnRangeY), 0);
-            if (isGameActive)
-            {
+            //if (isGameActive)
+            //{
                 Instantiate(enemyPrefab[enemyIndex], spawnPos, enemyPrefab[enemyIndex].transform.rotation);
-            }
+           // }
         }
     }
     
@@ -110,10 +116,5 @@ public class GameManager : MonoBehaviour
         isGameActive = false;
     }
 
-    // Restart game by reloading the scene
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
+  
 }
