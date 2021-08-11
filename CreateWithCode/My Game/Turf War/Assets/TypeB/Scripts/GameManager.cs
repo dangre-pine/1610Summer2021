@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerCountdown;
     public GameObject titleScreen;
     public Button restartButton;
-    
+
     private int score;
     private float timer;
     public bool isGameActive;

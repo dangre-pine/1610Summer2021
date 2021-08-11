@@ -315,6 +315,7 @@
             <e p="OutOfBounds.cs" t="Include" />
             <e p="PlayerMover.cs" t="Include" />
             <e p="Point.cs" t="Include" />
+            <e p="RepeatBackground.cs" t="Include" />
             <e p="TypeBSpawnManager.cs" t="Include" />
           </e>
         </e>
