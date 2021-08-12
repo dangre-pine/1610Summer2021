@@ -9,14 +9,17 @@ public class Enemy : MonoBehaviour
     private GameManager gameManager;
     
     public ParticleSystem explosionParticle;
-    // Start is called before the first frame update
+
+    public AudioClip enemySound;
+    private AudioSource enemyAudio;
+    
     void Start()
     {
+        enemyAudio = GetComponent<AudioSource>();
         targetRb = GetComponent<Rigidbody>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         

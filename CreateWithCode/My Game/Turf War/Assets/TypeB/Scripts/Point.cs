@@ -5,30 +5,40 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
+//[RequireComponent(typeof(AudioSource))]
+
 public class Point : MonoBehaviour
 {
+    public AudioSource tickSource;
     private Rigidbody rb;
     private GameManager gameManager;
     public int pointValue;
-    public GameObject grassExplosionFx;
+    private AudioSource audioSource;
+    public AudioClip Scored;
+    
+   // public GameObject grassExplosionFx;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-
+       // tickSource = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
        if (collision.name == "Player")
         {
-           if (gameManager.isGameActive)
+
+            if (gameManager.isGameActive)
             {
-                // Debug.Log("collison");
+                audioSource = GetComponent<AudioSource>();
+                audioSource.clip = Scored;
+                audioSource.Play();
                 Destroy(gameObject);
                 gameManager.UpdateScore(pointValue);
-                GrassExplode();
+                
+                //GrassExplode();
             }
         }
     }
@@ -39,9 +49,9 @@ public class Point : MonoBehaviour
         
     }
     
-    void GrassExplode()
-    {
-        Instantiate(grassExplosionFx, transform.position, grassExplosionFx.transform.rotation);
-    }
+    //GrassExplode()
+   // {
+      //  Instantiate(grassExplosionFx, transform.position, grassExplosionFx.transform.rotation);
+    //}
     
 }

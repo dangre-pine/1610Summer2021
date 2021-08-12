@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 0}
+  enemySound: {fileID: 8300000, guid: 6c8438c78146db747a33f64f653f3fbb, type: 3}
 --- !u!50 &3263399368016365635
 Rigidbody2D:
   serializedVersion: 4
