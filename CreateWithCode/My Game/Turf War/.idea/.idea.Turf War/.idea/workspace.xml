@@ -4,11 +4,10 @@
     <list default="true" id="7e51e5f0-659d-4d53-9cdc-f95406867a06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Turf War/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Turf War/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/MyGameTypeB.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MyGameTypeB.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TypeB/Prefabs/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TypeB/Prefabs/Enemy.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TypeB/Prefabs/Point.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TypeB/Prefabs/Point.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TypeB/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TypeB/Scripts/Enemy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TypeB/Scripts/PlayerMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TypeB/Scripts/PlayerMover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TypeB/Scripts/Point.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TypeB/Scripts/Point.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Prototype 3/.idea/.idea.Prototype 3/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Prototype 3/.idea/.idea.Prototype 3/.idea/indexLayout.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +57,8 @@
       <option value="$PROJECT_DIR$/Assets/TypeB/Scripts/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/TypeB/Scripts/MoveLeft.cs" />
       <option value="$PROJECT_DIR$/Assets/TypeB/Scripts/Enemy.cs" />
-      <option value="$PROJECT_DIR$/Assets/TypeB/Scripts/PlayerMover.cs" />
       <option value="$PROJECT_DIR$/Assets/TypeB/Scripts/Point.cs" />
+      <option value="$PROJECT_DIR$/Assets/TypeB/Scripts/PlayerMover.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1w5xmyMoiNYrxU1VcUeRbyzhtmj" />
@@ -108,7 +107,7 @@
       <workItem from="1628195186964" duration="7952000" />
       <workItem from="1628217705551" duration="18552000" />
       <workItem from="1628448678832" duration="22415000" />
-      <workItem from="1628570051388" duration="11392000" />
+      <workItem from="1628570051388" duration="14538000" />
     </task>
     <servers />
   </component>

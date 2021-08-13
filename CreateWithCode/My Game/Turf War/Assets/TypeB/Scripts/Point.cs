@@ -14,7 +14,7 @@ public class Point : MonoBehaviour
     private GameManager gameManager;
     public int pointValue;
     private AudioSource audioSource;
-    public AudioClip Scored;
+    
     
    // public GameObject grassExplosionFx;
     // Start is called before the first frame update
@@ -29,15 +29,10 @@ public class Point : MonoBehaviour
     {
        if (collision.name == "Player")
         {
-
             if (gameManager.isGameActive)
             {
-                audioSource = GetComponent<AudioSource>();
-                audioSource.clip = Scored;
-                audioSource.Play();
                 Destroy(gameObject);
                 gameManager.UpdateScore(pointValue);
-                
                 //GrassExplode();
             }
         }

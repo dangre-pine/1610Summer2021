@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a53fa5e39b7083f4b9368c355447e19d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tickSource: {fileID: 0}
+  tickSource: {fileID: -625887152735289409}
   pointValue: 1
   Scored: {fileID: 8300000, guid: 42d083346676b58479d4219664d8e5a6, type: 3}
 --- !u!50 &987783325124364729
@@ -308,8 +308,8 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
+  rolloffMode: 2
+  BypassEffects: 1
   BypassListenerEffects: 0
   BypassReverbZones: 0
   rolloffCustomCurve:
